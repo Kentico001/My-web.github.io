@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <!-- Tailwind CSS Play CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-900 text-white font-sans antialiased">
+    <!-- NAVIGATION BAR -->
+    <header class="sticky top-0 z-50 bg-slate-900/80 backdrop-blur-md border-b border-slate-800">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">
+                Jane Doe
+            </div>
+            <ul class="flex space-x-8 text-slate-300">
+                <li><a href="#about" class="hover:text-blue-400 transition-colors">About</a></li>
+                <li><a href="#skills" class="hover:text-blue-400 transition-colors">Skills</a></li>
+                <li><a href="#contact" class="hover:text-blue-400 transition-colors">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HERO / ABOUT SECTION -->
+    <section id="about" class="container mx-auto px-6 py-24 flex flex-col md:flex-row items-center gap-12">
+        <div class="w-64 h-64 md:w-80 md:h-80 relative">
+            <div class="absolute inset-0 bg-blue-500 rounded-3xl rotate-6 opacity-20"></div>
+            <img 
+                src="https://i.pravatar.cc" 
+                alt="Profile photo of Jane Doe"
+                class="rounded-3xl object-cover shadow-2xl relative z-10"
+            >
+        </div>
+        <div class="max-w-2xl text-center md:text-left">
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-4">Hi, I'm <span class="text-blue-400">Jane</span> 👋</h1>
+            <p class="text-xl md:text-2xl text-slate-400 mb-6 font-medium">Junior Web Developer</p>
+            <p class="text-lg text-slate-400 leading-relaxed">
+                I'm a passionate web developer based in <span class="text-white font-semibold">Nairobi, Kenya</span>.
+                I love building beautiful websites and learning new technologies.
+                Currently studying HTML, CSS, and JavaScript to create amazing user experiences.
+            </p>
+        </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="bg-slate-800/50 py-24">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-12 text-center">My Skills</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Skill 1 -->
+                <div class="bg-slate-800 p-8 rounded-2xl border border-slate-700 hover:border-blue-500/50 transition-all group">
+                    <div class="text-4xl mb-4 group-hover:scale-110 transition-transform">🌐</div>
+                    <h3 class="text-xl font-bold mb-2">HTML</h3>
+                    <p class="text-slate-400">Semantic markup and page structure</p>
+                </div>
+                <!-- Skill 2 -->
+                <div class="bg-slate-800 p-8 rounded-2xl border border-slate-700 hover:border-emerald-500/50 transition-all group">
+                    <div class="text-4xl mb-4 group-hover:scale-110 transition-transform">🎨</div>
+                    <h3 class="text-xl font-bold mb-2">CSS</h3>
+                    <p class="text-slate-400">Styling, layout, and animations</p>
+                </div>
+                <!-- Skill 3 -->
+                <div class="bg-slate-800 p-8 rounded-2xl border border-slate-700 hover:border-yellow-500/50 transition-all group">
+                    <div class="text-4xl mb-4 group-hover:scale-110 transition-transform">⚡</div>
+                    <h3 class="text-xl font-bold mb-2">JavaScript</h3>
+                    <p class="text-slate-400">Interactive features and logic</p>
+                </div>
+                <!-- Skill 4 -->
+                <div class="bg-slate-800 p-8 rounded-2xl border border-slate-700 hover:border-purple-500/50 transition-all group">
+                    <div class="text-4xl mb-4 group-hover:scale-110 transition-transform">📱</div>
+                    <h3 class="text-xl font-bold mb-2">Responsive Design</h3>
+                    <p class="text-slate-400">Mobile-friendly websites</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT ME SECTION -->
+    <section id="contact" class="container mx-auto px-6 py-24 max-w-4xl">
+        <h2 class="text-3xl font-bold mb-12 text-center">Contact Me</h2>
+        <form class="bg-slate-800 p-8 md:p-12 rounded-3xl border border-slate-700 shadow-xl space-y-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <label class="block text-sm font-medium text-slate-400 mb-2">Name</label>
+                    <input type="text" placeholder="Your name" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-slate-400 mb-2">Email</label>
+                    <input type="email" placeholder="you@example.com" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all">
+                </div>
+            </div>
+            <div>
+                <label class="block text-sm font-medium text-slate-400 mb-2">Message</label>
+                <textarea rows="4" placeholder="Write your message here..." class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"></textarea>
+            </div>
+            <button type="submit" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-4 rounded-xl transition-all shadow-lg shadow-blue-900/20">
+                Send Message
+            </button>
+        </form>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-slate-800 py-12 text-center">
+        <p class="text-slate-500">&copy; 2025 Jane Doe. Built with <span class="text-red-500">❤️</span> and Tailwind CSS.</p>
+    </footer>
+</body>
+</html>Initial portfolio upload
